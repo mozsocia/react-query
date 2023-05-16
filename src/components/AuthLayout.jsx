@@ -12,10 +12,10 @@ function AuthLayout() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (!authUser?.user) {
+    if (!authUser) {
       navigate("/login")
     }
-  }, [authUser?.user])
+  }, [authUser])
 
   return (
     <>

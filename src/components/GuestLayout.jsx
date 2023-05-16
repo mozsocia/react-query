@@ -9,10 +9,10 @@ function GuestLayout() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (authUser?.user){
+    if (authUser){
       navigate("/")
     }
-  }, [authUser?.user])
+  }, [authUser])
   
   return (
     <>
