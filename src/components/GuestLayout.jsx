@@ -1,18 +1,18 @@
 import React, { useEffect} from 'react'
 import {  Outlet , useNavigate } from 'react-router-dom';
-import { useAuth } from "../../hook/useAuth";
+import { useAuth } from "../hooks/useAuth";
 
 
 function GuestLayout() {
-  const { authData } = useAuth()
+  const { authUser } = useAuth()
 
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (authData.user){
+    if (authUser?.user){
       navigate("/")
     }
-  }, [authData.user])
+  }, [authUser?.user])
   
   return (
     <>

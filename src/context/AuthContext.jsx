@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 // Create the AuthContext
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
 // Create the AuthProvider component
 const AuthProvider = ({ children }) => {

@@ -3,6 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import AuthLayout from './components/AuthLayout';
 import GuestLayout from './components/GuestLayout';
 import AuthProvider from './context/AuthContext';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
 
 function App() {
 
@@ -11,7 +14,7 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<AuthLayout />}>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Dashboard />} />
 
           </Route>
 
